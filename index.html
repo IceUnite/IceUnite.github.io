@@ -6,57 +6,65 @@
     <title>IceUnite - GitHub Profile</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <style>
+        /* Общие стили */
         body {
             margin: 0;
             font-family: 'Poppins', sans-serif;
             background: radial-gradient(circle at bottom, #000428, #004e92, #1e3c72, #1e3c72 80%);
             color: #fff;
         }
+
+        /* Заголовок */
         .header {
             text-align: center;
             padding: 50px 20px;
         }
+
         .header h1 {
             font-size: 3em;
             font-weight: 600;
             margin-bottom: 10px;
         }
+
         .header p {
             font-size: 1.5em;
             font-weight: 400;
             margin-bottom: 20px;
         }
-        .stats {
+
+        /* Слайдер */
+        .slider-container {
+            margin: 50px auto;
+            overflow: hidden;
+            width: 100%;
+            max-width: 1200px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            padding: 10px;
+        }
+
+        .slider-track {
             display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 20px;
-            margin: 30px 0;
+            animation: slide 15s linear infinite;
         }
-        .stats img {
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
-            max-width: 100%;
-        }
-        .footer {
+
+        .slider-item {
+            flex: 0 0 auto;
+            padding: 10px;
             text-align: center;
-            padding: 20px;
-            background-color: rgba(0, 0, 0, 0.2);
-            margin-top: 50px;
-            font-size: 1em;
         }
-        .footer a {
-            color: #ffa500;
-            text-decoration: none;
-            font-weight: 600;
+
+        .slider-item img {
+            width: 80px;
+            height: 80px;
         }
-        .footer a:hover {
-            text-decoration: underline;
+
+        @keyframes slide {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
         }
-        .gif-container {
-            text-align: center;
-            margin-top: 30px;
-        }
+
+        /* Описание */
         .description {
             text-align: center;
             font-size: 1.2em;
@@ -65,108 +73,76 @@
             background: rgba(0, 0, 0, 0.3);
             border-radius: 10px;
         }
+
         .description span {
             font-weight: bold;
             color: #ffa500;
         }
+
+        /* Иконки технологий */
         .tech-icons {
             display: flex;
             justify-content: center;
             gap: 20px;
             margin-top: 20px;
         }
+
         .tech-icons img {
             width: 50px;
             height: 50px;
         }
-        /* Стили для анимированного фона */
-        .animated-background {
-            position: relative;
-            overflow: hidden;
-            background: linear-gradient(to right, #000428, #004e92);
-            color: rgba(255, 255, 255, 0.1);
-            font-size: 2em;
-            text-transform: uppercase;
+
+        /* Футер */
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.2);
+            margin-top: 50px;
+            font-size: 1em;
+        }
+
+        .footer a {
+            color: #ffa500;
+            text-decoration: none;
             font-weight: 600;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 200px;
-            margin: 50px 0;
         }
-        .animated-background .scrolling-text {
-            display: flex;
-            animation: scroll 10s linear infinite;
-            white-space: nowrap;
-        }
-        @keyframes scroll {
-            from {
-                transform: translateX(100%);
-            }
-            to {
-                transform: translateX(-100%);
-            }
-        }
-        .animated-background span {
-            margin: 0 50px;
+
+        .footer a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
+    <!-- Заголовок -->
     <div class="header">
         <h1>Welcome to IceUnite's GitHub Profile!</h1>
         <p>A passionate developer who crafts elegant solutions to complex problems.</p>
     </div>
 
-    <!-- Animated Background -->
-    <div class="animated-background">
-        <div class="scrolling-text">
-            <span>Java</span>
-            <span>Kotlin</span>
-            <span>Android</span>
-            <span>JavaScript</span>
-            <span>TypeScript</span>
-            <span>Python</span>
-            <span>C#</span>
-            <span>PHP</span>
-            <span>HTML</span>
-            <span>Go</span>
-            <span>Scala</span>
+    <!-- Слайдер -->
+    <div class="slider-container">
+        <div class="slider-track">
+            <div class="slider-item"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Flutter_logo.svg" alt="Flutter" title="Flutter"></div>
+            <div class="slider-item"><img src="https://pub.dev/static/hash-o6oemknr/img/pub-dev-logo.svg" alt="Dart" title="Dart"></div>
+            <div class="slider-item"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python" title="Python"></div>
+            <div class="slider-item"><img src="https://upload.wikimedia.org/wikipedia/commons/6/62/CSS3_logo.svg" alt="CSS" title="CSS"></div>
+            <div class="slider-item"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="JavaScript" title="JavaScript"></div>
+            <div class="slider-item"><img src="https://www.postman.com/favicon.ico" alt="Postman" title="Postman"></div>
+            <div class="slider-item"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a2/Swagger_logo.svg" alt="Swagger" title="Swagger"></div>
+            <div class="slider-item"><img src="https://upload.wikimedia.org/wikipedia/commons/7/71/Bloc_logo.svg" alt="Bloc" title="Bloc"></div>
+            <div class="slider-item"><img src="https://upload.wikimedia.org/wikipedia/commons/7/72/Cubit_logo.svg" alt="Cubit" title="Cubit"></div>
+            <div class="slider-item"><img src="https://upload.wikimedia.org/wikipedia/commons/0/0f/Riverpod_logo.svg" alt="Riverpod" title="Riverpod"></div>
         </div>
     </div>
 
-    <!-- Description -->
+    <!-- Описание -->
     <div class="description">
         <p>🚀 I am a <span>Flutter Developer</span> passionate about building beautiful applications! <br>
            I work with technologies like <span>Python</span>, <span>Dart</span>, <span>Flutter</span>, <span>HTML</span>, <span>CSS</span>, <span>JS</span>, and use tools like <span>Postman</span> and <span>Swagger</span>. <br>
            For state management, I use <span>Bloc</span>, <span>Cubit</span>, and <span>Riverpod</span>, and I always follow <span>Clean Architecture</span> principles to ensure scalability and maintainability! 🎯</p>
     </div>
 
-    <!-- Tech Icons -->
-    <div class="tech-icons">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Flutter_logo.svg" alt="Flutter" title="Flutter">
-        <img src="https://pub.dev/static/hash-o6oemknr/img/pub-dev-logo.svg" alt="Dart" title="Dart">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python" title="Python">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/62/CSS3_logo.svg" alt="CSS" title="CSS">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="JavaScript" title="JavaScript">
-    </div>
-
-    <!-- Anime GIFs -->
-    <div class="gif-container">
-        <img src="https://media1.tenor.com/m/pLhhw8tQib0AAAAd/killua-hunter-x-hunter.gif" alt="Anime GIF 1" width="200">
-    </div>
-
-    <div class="stats">
-        <!-- GitHub Stats -->
-        <img src="https://github-readme-stats.vercel.app/api?username=IceUnite&show_icons=true&theme=radical&count_private=true&include_all_commits=true" alt="GitHub Stats for 2023-2024">
-
-        <!-- GitHub Streak Stats -->
-        <img src="https://github-readme-streak-stats.herokuapp.com?user=IceUnite&theme=radical&date_format=M%20j%5B%2C%20Y%5D" alt="GitHub Streak Stats">
-
-        <!-- Codewars Stats -->
-        <img src="https://www.codewars.com/users/IceUnite/badges/large" alt="Codewars Badge">
-    </div>
-
+    <!-- Футер -->
     <div class="footer">
         <p>✨ Let's connect and collaborate! Visit my <a href="https://github.com/IceUnite" target="_blank">GitHub</a> for more. ✨</p>
     </div>
