@@ -45,6 +45,7 @@
 
         .slider-track {
             display: flex;
+            gap: 30px; /* Увеличенное расстояние между иконками */
             animation: slide 15s linear infinite;
         }
 
@@ -110,6 +111,19 @@
         .footer a:hover {
             text-decoration: underline;
         }
+
+        /* Статистика */
+        .stats {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .stats iframe {
+            width: 100%;
+            max-width: 600px;
+            height: 200px;
+            border: none;
+        }
     </style>
 </head>
 <body>
@@ -133,6 +147,12 @@
             <div class="slider-item"><img src="https://upload.wikimedia.org/wikipedia/commons/7/72/Cubit_logo.svg" alt="Cubit" title="Cubit"></div>
             <div class="slider-item"><img src="https://upload.wikimedia.org/wikipedia/commons/0/0f/Riverpod_logo.svg" alt="Riverpod" title="Riverpod"></div>
         </div>
+    </div>
+
+    <!-- Статистика -->
+    <div class="stats">
+        <iframe src="https://github-readme-stats.vercel.app/api?username=IceUnite&show_icons=true&theme=radical" title="GitHub Stats"></iframe>
+        <iframe src="https://wakatime.com/share/@IceUnite/12345abc-def6-789g-hijk-98765lmnopqrst.svg" title="WakaTime Stats"></iframe>
     </div>
 
     <!-- Описание -->
